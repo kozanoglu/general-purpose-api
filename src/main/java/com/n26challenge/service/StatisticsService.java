@@ -47,10 +47,10 @@ public class StatisticsService {
      * @return StatisticsResult object
      */
     public StatisticsResult getStatisticsForTheLastMinute() {
-        Double min = Double.MAX_VALUE;
+        Double min = STATISTICS.size() == 0 ? 0 : Double.MAX_VALUE;
         Double max = 0.0;
         Double totalAmount = 0.0;
-        Double average;
+        Double average = 0.0;
         Integer totalCount = 0;
 
         for (StatisticPerSecond statistic : STATISTICS.values()) {
@@ -71,7 +71,10 @@ public class StatisticsService {
             totalCount += statistic.getCount();
         }
 
-        average = totalAmount / totalCount;
+        if (totalCount > 0)
+        {
+            average = totalAmount / totalCount;
+        }
 
         StatisticsResult statisticsResult = new StatisticsResult();
         statisticsResult.setAvg(average);

@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
+
 import static com.n26challenge.util.TimeUtil.isWithinLastMinute;
 
 @RestController
@@ -29,5 +31,9 @@ public class TransactionsController {
 
         statisticsService.persistTransaction(transaction);
         return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Date().getTime());
     }
 }
