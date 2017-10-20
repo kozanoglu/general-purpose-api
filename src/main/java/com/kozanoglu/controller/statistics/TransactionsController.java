@@ -1,15 +1,19 @@
-package com.n26challenge.controller;
-
-import com.n26challenge.domain.Transaction;
-import com.n26challenge.service.StatisticsService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+package com.kozanoglu.controller.statistics;
 
 import java.util.Date;
 
-import static com.n26challenge.util.TimeUtil.isWithinLastMinute;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.kozanoglu.model.statistics.Transaction;
+import com.kozanoglu.service.statistics.StatisticsService;
+
+import static com.kozanoglu.util.TimeUtil.isWithinLastMinute;
 
 @RestController
 @RequestMapping(value = "/transactions")

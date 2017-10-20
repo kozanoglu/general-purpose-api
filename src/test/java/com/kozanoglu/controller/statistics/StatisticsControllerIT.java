@@ -1,8 +1,8 @@
-package com.n26challenge.controller;
+package com.kozanoglu.controller.statistics;
 
-import com.n26challenge.domain.StatisticsResult;
-import com.n26challenge.domain.Transaction;
-import com.n26challenge.service.StatisticsService;
+import com.kozanoglu.model.statistics.StatisticsResult;
+import com.kozanoglu.model.statistics.Transaction;
+import com.kozanoglu.service.statistics.StatisticsService;
 import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;

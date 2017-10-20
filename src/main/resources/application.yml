@@ -1,0 +1,8 @@
+external:
+  url:
+  oauth_consumer_key:
+  oauth_signature:
+  read_timeout: 20000
+  connect_timeout: 15000
+  connection_request_timeout: 15000
+  retry_attempts: 1

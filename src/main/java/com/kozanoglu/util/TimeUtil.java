@@ -1,4 +1,4 @@
-package com.n26challenge.util;
+package com.kozanoglu.util;
 
 import java.util.Calendar;
 import java.util.Date;

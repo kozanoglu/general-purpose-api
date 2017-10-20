@@ -1,10 +1,14 @@
-package com.n26challenge.controller;
+package com.kozanoglu.controller.statistics;
 
-import com.n26challenge.domain.StatisticsResult;
-import com.n26challenge.service.StatisticsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.kozanoglu.model.statistics.StatisticsResult;
+import com.kozanoglu.service.statistics.StatisticsService;
 
 @RestController
 @RequestMapping("/statistics/")

@@ -1,8 +1,8 @@
-package com.n26challenge.service;
+package com.kozanoglu.service.statistics;
 
-import com.n26challenge.domain.StatisticPerSecond;
-import com.n26challenge.domain.StatisticsResult;
-import com.n26challenge.domain.Transaction;
+import java.util.Date;
+import java.util.Map;
+
 import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,10 +10,11 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import java.util.Date;
-import java.util.Map;
+import com.kozanoglu.model.statistics.StatisticPerSecond;
+import com.kozanoglu.model.statistics.StatisticsResult;
+import com.kozanoglu.model.statistics.Transaction;
 
-import static com.n26challenge.util.TimeUtil.getSecondFromTimestamp;
+import static com.kozanoglu.util.TimeUtil.getSecondFromTimestamp;
 
 @RunWith(MockitoJUnitRunner.class)
 public class StatisticsServiceTest {

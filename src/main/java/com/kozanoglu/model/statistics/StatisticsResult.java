@@ -1,4 +1,4 @@
-package com.n26challenge.domain;
+package com.kozanoglu.model.statistics;
 
 public class StatisticsResult {
 

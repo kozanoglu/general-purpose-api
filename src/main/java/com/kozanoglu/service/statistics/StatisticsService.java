@@ -1,16 +1,17 @@
-package com.n26challenge.service;
-
-import com.n26challenge.domain.StatisticPerSecond;
-import com.n26challenge.domain.StatisticsResult;
-import com.n26challenge.domain.Transaction;
-import org.springframework.stereotype.Service;
+package com.kozanoglu.service.statistics;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import static com.n26challenge.util.TimeUtil.getSecondFromTimestamp;
-import static com.n26challenge.util.TimeUtil.isWithinLastMinute;
+import org.springframework.stereotype.Service;
+
+import com.kozanoglu.model.statistics.StatisticPerSecond;
+import com.kozanoglu.model.statistics.StatisticsResult;
+import com.kozanoglu.model.statistics.Transaction;
+
+import static com.kozanoglu.util.TimeUtil.getSecondFromTimestamp;
+import static com.kozanoglu.util.TimeUtil.isWithinLastMinute;
 
 @Service
 public class StatisticsService {
